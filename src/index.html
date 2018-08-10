@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<script src="js/flexible.js"></script>
+
+<body>
+    <div class="box">
+        <header>
+            <span><img src="images/mi_03.gif" alt=""></span>
+            <input type="text" placeholder="搜索商品名称">
+            <span><img src="images/man_05.gif" alt=""></span>
+        </header>
+        <section>
+            <div class="content">
+                <ul class="list">
+                    <li>推荐</li>
+                    <li>手机</li>
+                    <li>智能</li>
+                    <li>电视</li>
+                    <li>电脑</li>
+                    <li>全面屏</li>
+                    <li>生活</li>
+                    <li>彩妆</li>
+                    <li>衣服</li>
+                    <li>鞋子</li>
+                    <li>宝宝</li>
+                    <li>手机</li>
+                </ul>
+            </div>
+            <div class="imgs">
+                <div class="list_imgs">
+                    <script id="tpl" type="text/x-handlebars-template">
+                        {{#each this}}
+                        <dl>
+                            <dt><img src="images/{{pic}}" alt=""></dt>
+                            <dd>{{price}}</dd>
+                        </dl>
+                        {{/each}}
+                    </script>
+                </div>
+            </div>
+            <div class="banner">
+                <img src="images/banner1_07.gif" alt="">
+            </div>
+            <div class="day">
+                <h2>每日精选</h2>
+                <img src="images/banner2_10.gif" alt="">
+            </div>
+        </section>
+        <footer>
+            <ul>
+                <li><img src="images/man_05.gif" alt=""><span>主页</span></li>
+                <li><img src="images/man_05.gif" alt=""><span>主页</span></li>
+                <li><img src="images/man_05.gif" alt=""><span>主页</span></li>
+                <li><img src="images/man_05.gif" alt=""><span>主页</span></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+<script src="js/require.js"></script>
+<script>
+    require(['./js/main.js'], function() {
+        require(['index'])
+    })
+</script>
+
+</html>

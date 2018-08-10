@@ -1,0 +1,119 @@
+@import "common.scss";
+@import "_mixin.scss";
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+    header {
+        width: 100%;
+        height: pxTorem(46px);
+        @include box_flex;
+        @include align;
+        span {
+            padding: 0 pxTorem(10px);
+            img {
+                width: pxTorem(26px);
+            }
+        }
+        input {
+            flex: 1;
+            background: #fff;
+            height: pxTorem(32px);
+            padding-left: pxTorem(10px);
+            @include sizing;
+        }
+    }
+    section {
+        width: 100%;
+        flex: 1;
+        padding: 0 pxTorem(10px);
+        @include sizing;
+        .content {
+            width: 100%;
+            height: pxTorem(46px);
+            line-height: pxTorem(46px);
+            overflow: hidden;
+            .list {
+                width: 140%;
+                height: 100%;
+                @include box_flex;
+                li {
+                    width: pxTorem(50px);
+                }
+            }
+        }
+        .imgs {
+            margin: pxTorem(10px) 0;
+            width: 100%;
+            overflow: hidden;
+            .list_imgs {
+                width: 140%;
+                height: 100%;
+                @include box_flex;
+                dl {
+                    width: 30%;
+                    margin-right: pxTorem(10px);
+                    dt {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    dd {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .banner {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        .day {
+            background: #fff;
+            h2 {
+                width: 100%;
+                line-height: pxTorem(36px);
+                padding-left: pxTorem(10px);
+                @include sizing;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+    footer {
+        background: #efefef;
+        width: 100%;
+        height: pxTorem(46px);
+        ul {
+            @include box_flex;
+            @include justify(space-around);
+            @include align;
+            li {
+                width: 25%;
+                text-align: center;
+                img {
+                    width: pxTorem(24px);
+                }
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+}
